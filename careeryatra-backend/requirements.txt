@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+pymongo
+motor
+pdfplumber
+pytesseract
+pdf2image
+transformers
+torch
+torch_geometric
+networkx
+sentence-transformers
+google-generativeai
+scikit-learn
+lime
+Pillow
