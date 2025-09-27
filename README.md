@@ -71,8 +71,8 @@ careeryatra/
 ### 1️⃣ Clone the repo
 
 ```bash
-git clone https://github.com/your-username/careeryatra.git
-cd careeryatra
+git clone https://github.com/AaryaDeCode/SmartRecruit.git
+cd RecruitingTool
 ```
 
 ### 2️⃣ Set up the backend
@@ -89,6 +89,9 @@ uvicorn app.main:app --reload
 
 ```bash
 cd ../frontend
+python -m venv venv
+venv\Scripts\activate  # On Windows
+pip install -r requirements.txt
 streamlit run app.py
 ```
 
