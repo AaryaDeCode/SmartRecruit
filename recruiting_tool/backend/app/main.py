@@ -1,6 +1,14 @@
 from fastapi import FastAPI
 from app.api import resumes
+from fastapi.middleware.cors import CORSMiddleware
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # or set your specific Streamlit URL for security
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 app = FastAPI(
     title="CareerYatra Resume Ranking API",
     version="1.0.0"
