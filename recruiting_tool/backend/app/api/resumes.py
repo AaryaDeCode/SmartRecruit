@@ -45,5 +45,6 @@ async def upload_resume(file: UploadFile = File(...), job_description: str = For
     return {
         "filename": file.filename,
         "scores": document["scores"],
+
         "keywords": jd_keywords
     }

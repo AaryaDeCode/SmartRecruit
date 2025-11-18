@@ -35,11 +35,11 @@ class GCN(torch.nn.Module):
 gcn_model = GCN(input_dim=384, hidden_dim=128, output_dim=64).to(device)
 
 # --- Gemini API ---
-GEMINI_API_KEY = 'AIzaSyAsCcmCgTpIU72MAsxmx3bVCs770XAZmRw'  # <-- Replace in real setup
+GEMINI_API_KEY = 'AIzaSyDy7yR0srhPp4TKj7QjZlOVim52csF0PvU'  # <-- Replace in real setup
 genai.configure(api_key=GEMINI_API_KEY)
 
 def get_keywords_from_gemini(jd_text: str) -> list:
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-2.5-flash')
     prompt = f"Actually I am building context aware resume filtering tool ,So Extract the  related keywords like skills, tools, technologies from this Job Description:\n{jd_text}\nOnly give comma-separated keywords."
     response = model.generate_content(prompt)
     keywords = response.text.strip().split(',')
