@@ -5,6 +5,7 @@ class APIClient:
         self.base_url = base_url
 
     def upload_resume(self, file, jd_text):
+        self.base_url = "https://smartrecruit-backend.onrender.com"
         url = f"{self.base_url}/api/resumes/upload-resume/"
         files = {"file": (file.name, file, "application/pdf")}
         data = {"job_description": jd_text}
